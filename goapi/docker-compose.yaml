@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql_codecommerce
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: codecommerce
+    ports:
+      - "3306:3306"
+    volumes:
+      - .docker/mysql:/var/lib/mysql
